@@ -153,13 +153,14 @@ The models downloaded from our repo follow the above license policy (which is fo
 ## Citation  
 If you find this work useful, please cite our paper and give us a star ⭐:  
 ```bibtex
-@article{you2025lvface,
-  title={LVFace: Progressive Cluster Optimization for Large Vision Models in Face Recognition},
+@inproceedings{you2025lvface,
+  title={{LVFace}: Progressive Cluster Optimization for Large Vision Models in Face Recognition},
   author={You, Jinghan and Li, Shanglin and Sun, Yuanrui and Wei, Jiangchuan and Guo, Mingyu and Feng, Chao and Ran, Jiao},
-  journal={arXiv preprint arXiv:2501.13420},
+  booktitle={ICCV},
   year={2025}
 }
 ```
+
 
 ## Acknowledgments  
 We sincerely thank **Professor Deng Jiankang** for his valuable guidance and insights throughout the research. 
