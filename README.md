@@ -42,7 +42,7 @@ This is the official PyTorch implementation for the inference of LVFace .Drawing
 - 🎉🎉🎉 LVFace is accepted by **ICCV 2025**. (July, 2025 UTC)
 - 🔥🔥🔥 We have updated our arXiv report. Please click [here](https://arxiv.org/abs/2501.13420v2) to view it. (March, 2025 UTC)  
 - 🎉🎉🎉 LVFace secured **1st place** in the ICCV 2021 Masked Face Recognition (MFR)-Ongoing Challenge (academic track). (December, 2024 UTC)  
-<img src="docs/MFR.png" alt="LVFace 示意图" width="15%">
+<img src="docs/MFR.png" alt="LVFace 示意图" width="30%">
 
 ## Requirements  
 All required dependencies are listed in `requirements.txt`:  
@@ -66,13 +66,13 @@ Test datasets for inference validation can be downloaded from the following sour
 ## LVFace Pretrained Models  
 Pretrained model weights for inference are available below in both ONNX and PyTorch (.pt) formats:  
 
-| Training Data | Model         | IJB-C(1e-6) | IJB-C(1e-5) | IJB-C(1e-4) | IJB-B(1e-4) | ONNX Download | PyTorch (.pt) Download |
-|---------------|---------------|-------------|-------------|-------------|-------------|---------------|------------------------|
-| Glint360K     | LVFace-T      | 88.53       | 95.63       | 96.67       | 95.41       | [HuggingFace](https://huggingface.co/ByteDance/LVFace/tree/main) | [HuggingFace](https://huggingface.co/ByteDance/LVFace/tree/main) |
-| Glint360K     | LVFace-S      | 90.06       | 96.52       | 97.31       | 96.14       | [HuggingFace](https://huggingface.co/ByteDance/LVFace/tree/main) | [HuggingFace](https://huggingface.co/ByteDance/LVFace/tree/main) |
-| Glint360K     | LVFace-B      | 90.06       | 97.00       | 97.70       | 96.51       | [HuggingFace](https://huggingface.co/ByteDance/LVFace/tree/main) | [HuggingFace](https://huggingface.co/ByteDance/LVFace/tree/main) |
-| Glint360K     | LVFace-L      | 89.51       | 97.02       | 97.66       | 96.51       | [HuggingFace](https://huggingface.co/ByteDance/LVFace/tree/main) | [HuggingFace](https://huggingface.co/ByteDance/LVFace/tree/main) |  
-| WebFace42M    | LVFace-B      | -           | -       | -       |  -      | come soon | come soon |
+| Training Data | Model         | IJB-C(1e-6) | IJB-C(1e-5) | IJB-C(1e-4) | IJB-B(1e-4) | Download |
+|---------------|---------------|-------------|-------------|-------------|-------------|---------------|
+| Glint360K     | LVFace-T      | 88.53       | 95.63       | 96.67       | 95.41       | [HuggingFace](https://huggingface.co/bytedance-research/LVFace/tree/main/LVFace-T_Glint360K) |
+| Glint360K     | LVFace-S      | 90.06       | 96.52       | 97.31       | 96.14       | [HuggingFace](https://huggingface.co/bytedance-research/LVFace/tree/main/LVFace-S_Glint360K) |
+| Glint360K     | LVFace-B      | 90.06       | 97.00       | 97.70       | 96.51       | [HuggingFace](https://huggingface.co/bytedance-research/LVFace/tree/main/LVFace-B_Glint360K) |
+| Glint360K     | LVFace-L      | 89.51       | 97.02       | 97.66       | 96.51       | [HuggingFace](https://huggingface.co/bytedance-research/LVFace/tree/main/LVFace-L_Glint360K) |
+| WebFace42M    | LVFace-B      | -           | -           | -           |  -          | come soon |
 
 
 ## Step-by-Step Usage Guide
