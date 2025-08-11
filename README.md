@@ -42,7 +42,9 @@ This is the official PyTorch implementation for the inference of LVFace .Drawing
 - 🎉🎉🎉 LVFace is accepted by **ICCV 2025**. (July, 2025 UTC)
 - 🔥🔥🔥 We have updated our arXiv report. Please click [here](https://arxiv.org/abs/2501.13420v2) to view it. (March, 2025 UTC)  
 - 🎉🎉🎉 LVFace secured **1st place** in the ICCV 2021 Masked Face Recognition (MFR)-Ongoing Challenge (academic track). (December, 2024 UTC)  
+<div align="center">
 <img src="docs/MFR.png" alt="LVFace 示意图" width="30%">
+</div>
 
 ## Requirements  
 All required dependencies are listed in `requirements.txt`:  
