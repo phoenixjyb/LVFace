@@ -37,11 +37,11 @@ This is the official PyTorch implementation for the inference of LVFace .Drawing
 <br>
 
 ## News  
-- 🔥🔥🔥 We have released the training weights of LVFace, aiming to support relevant research that relies on facial features. (August, 2025 UTC)
+- 🔥🔥🔥 We have released the training weights of LVFace. Please click [here](https://huggingface.co/bytedance-research/LVFace/tree/main) to download it. (August, 2025 UTC)
 - 🎉🎉🎉 LVFace has been recommended as **ICCV Highlight**. (July, 2025 UTC)
 - 🎉🎉🎉 LVFace is accepted by **ICCV 2025**. (July, 2025 UTC)
-- 🔥🔥🔥 We have updated our arXiv report. Please click [here](https://arxiv.org/abs/2501.13420v2) to view it. (March, 2025 UTC)  
-- 🎉🎉🎉 LVFace secured **1st place** in the ICCV 2021 Masked Face Recognition (MFR)-Ongoing Challenge (academic track). (December, 2024 UTC)  
+- 🔥🔥🔥 We have updated the arXiv report of LVFace. Please click [here](https://arxiv.org/abs/2501.13420v2) to view it. (March, 2025 UTC)
+- 🎉🎉🎉 LVFace secured **1st place** in the ICCV 2021 Masked Face Recognition (MFR)-Ongoing Challenge (academic track). (December, 2024 UTC)
 <div align="center">
 <img src="docs/MFR.png" alt="LVFace 示意图" width="30%">
 </div>
