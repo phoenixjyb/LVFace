@@ -100,7 +100,7 @@ Pretrained model weights for inference are available below in both ONNX and PyTo
 
 
 **2. Download Pretrained Models**  
-   Download the ONNX-format pretrained weights from the [LVFace Pretrained Models](https://huggingface.co/ByteDance/LVFace/tree/main) section, then place them in a directory (e.g., `./LVFace_model/`). 
+   Download the ONNX-format pretrained weights from the [LVFace Pretrained Models](https://huggingface.co/bytedance-research/LVFace/tree/main) section, then place them in a directory (e.g., `./LVFace_model/`). 
 
 
 **3. Run Inference**  
