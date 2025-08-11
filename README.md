@@ -26,7 +26,7 @@
 
 <div align="center">
 <!-- <h5 align="center"> -->
-This is the official PyTorch implementation for the inference of LVFace .Drawing inspiration from the massive data support, multi - stage training paradigm, and Transformer architecture of large - model technology, this method, based on Large Vision Transformer, has carried out progressive optimization of the face clustering space through multiple stages on massive datasets.
+This is the official PyTorch implementation for the inference of LVFace. Drawing inspiration from the massive data support, multi-stage training paradigm, and Transformer architecture of large-model technology, this method, based on Large Vision Transformer, has carried out progressive optimization of the face clustering space through multiple stages on massive datasets.
 <!-- </h5> -->
 </div>
 
