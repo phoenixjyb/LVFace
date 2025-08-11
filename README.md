@@ -4,7 +4,7 @@
 
 <h5 align="center">
 <a href='https://arxiv.org/abs/2501.13420v2'><img src='https://img.shields.io/badge/Arxiv-Paper-Red'></a>
-<a href="https://huggingface.co/ByteDance/LVFace">
+<a href="https://huggingface.co/bytedance-research/LVFace">
     <img 
         src="https://img.shields.io/badge/HuggingFace-Model-yellow?logo=huggingface&logoColor=yellow" 
         alt="Model"
