@@ -1,0 +1,37 @@
+# --- Core runtime (Py 3.13 compatible) ---
+onnxruntime-gpu>=1.22.0
+
+# --- PyTorch (CUDA 12.4) ---
+torch>=2.6.0 --index-url https://download.pytorch.org/whl/cu124
+torchvision>=0.21.0 --index-url https://download.pytorch.org/whl/cu124
+torchaudio>=2.6.0 --index-url https://download.pytorch.org/whl/cu124
+
+# --- Core dependencies ---
+numpy>=2.0.0
+scikit-image>=0.24.0
+opencv-python>=4.12.0
+requests>=2.32.0
+onnx>=1.18.0
+
+# --- CUDA libraries (ready for RTX 3090) ---
+nvidia-cuda-runtime-cu12
+nvidia-cublas-cu12
+nvidia-cufft-cu12
+nvidia-curand-cu12
+nvidia-cusolver-cu12
+nvidia-cusparse-cu12
+nvidia-cudnn-cu12
+nvidia-nvjitlink-cu12time (Py 3.13 needs >=1.20.0 wheels) ---
+onnxruntime-gpu==1.21.0
+
+# --- PyTorch (CUDA 12.4) ---
+# Using PyTorch’s wheel index per line (matches your original style)
+torch==2.6.0 --index-url https://download.pytorch.org/whl/cu124
+torchvision==0.21.0 --index-url https://download.pytorch.org/whl/cu124
+torchaudio==2.6.0 --index-url https://download.pytorch.org/whl/cu124
+
+# --- Libs used by LVFace/inference stack ---
+# Numpy 2.x has Python 3.13 wheels available
+numpy>=2.0.0
+scikit-image>=0.24.0
+insightface>=0.7.3
