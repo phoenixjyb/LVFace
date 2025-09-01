@@ -5,6 +5,10 @@ import cv2
 import numpy as np
 import onnxruntime
 from typing import Optional, Tuple, Union
+from flask import Flask, request, jsonify
+import base64
+import io
+from PIL import Image
 
 class LVFaceONNXInferencer:
     """LVFace Inference Class using ONNX Runtime"""
@@ -146,10 +150,86 @@ class LVFaceONNXInferencer:
 
 
 if __name__ == "__main__":
-    # Example usage
-    model_path = "./LVFace-T_Glint360K.onnx"  # Update with your model path
-    inferencer = LVFaceONNXInferencer(model_path, use_gpu=True)
+    # Initialize Flask app and model
+    app = Flask(__name__)
+    model_path = "./models/LVFace-B_Glint360K.onnx"  # Update with your model path
     
+    try:
+        inferencer = LVFaceONNXInferencer(model_path, use_gpu=True)
+        print("✅ LVFace ONNX model loaded successfully")
+    except Exception as e:
+        print(f"❌ Failed to load LVFace model: {e}")
+        inferencer = None
+
+    @app.route('/health', methods=['GET'])
+    def health_check():
+        """Health check endpoint"""
+        status = "healthy" if inferencer is not None else "unhealthy"
+        return jsonify({
+            "status": status,
+            "service": "LVFace-ONNX",
+            "model_loaded": inferencer is not None
+        })
+
+    @app.route('/embed', methods=['POST'])
+    def get_face_embedding():
+        """Get face embedding from image"""
+        if inferencer is None:
+            return jsonify({"error": "Model not loaded"}), 500
+            
+        try:
+            # Check if image is provided in base64 format
+            if 'image' in request.json:
+                # Decode base64 image
+                image_data = base64.b64decode(request.json['image'])
+                img = cv2.imdecode(np.frombuffer(image_data, np.uint8), cv2.IMREAD_COLOR)
+            elif 'url' in request.json:
+                # Download image from URL
+                response = requests.get(request.json['url'])
+                img = cv2.imdecode(np.frombuffer(response.content, np.uint8), cv2.IMREAD_COLOR)
+            else:
+                return jsonify({"error": "No image or url provided"}), 400
+                
+            # Get embedding
+            embedding = inferencer._infer_onnx(img)
+            
+            return jsonify({
+                "embedding": embedding.tolist(),
+                "shape": embedding.shape
+            })
+            
+        except Exception as e:
+            return jsonify({"error": str(e)}), 500
+
+    @app.route('/similarity', methods=['POST'])
+    def calculate_similarity():
+        """Calculate similarity between two face embeddings"""
+        if inferencer is None:
+            return jsonify({"error": "Model not loaded"}), 500
+            
+        try:
+            data = request.json
+            if 'embedding1' not in data or 'embedding2' not in data:
+                return jsonify({"error": "Two embeddings required"}), 400
+                
+            emb1 = np.array(data['embedding1'])
+            emb2 = np.array(data['embedding2'])
+            
+            similarity = inferencer.calculate_similarity(emb1, emb2)
+            
+            return jsonify({
+                "similarity": float(similarity)
+            })
+            
+        except Exception as e:
+            return jsonify({"error": str(e)}), 500
+
+    # Start Flask server
+    print("🚀 Starting LVFace ONNX service on port 8003...")
+    app.run(host='0.0.0.0', port=8003, debug=False)
+    
+    # Example usage (won't run when used as web server)
+    """
     # Example 1: Inference from local image
     try:
         img_path = "1.jpg"  # Update with your image path
@@ -174,3 +254,4 @@ if __name__ == "__main__":
         print(f"Cosine similarity: {similarity:.6f}")
     except Exception as e:
         print(f"Error in similarity calculation: {e}")
+    """
