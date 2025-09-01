@@ -1,0 +1,10 @@
+# ONNX Runtime with CUDA 12 support
+onnxruntime-gpu==1.18.0
+
+# Core dependencies for LVFace
+numpy<2.0
+scikit-image
+opencv-python
+requests
+onnx
+insightface

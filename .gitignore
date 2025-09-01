@@ -1,3 +1,19 @@
+# Virtual Environment
+.venv/
+.venv-wsl/
+
+# Python cache
+__pycache__/
+*.pyc
+
+# Build artifacts
+build/
+dist/
+*.egg-info/
+
+# IDE specific
+.vscode/
+.idea/
+
 work_dirs
-__pycache__
 data
