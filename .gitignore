@@ -1,6 +1,7 @@
 # Virtual Environment
 .venv/
 .venv-wsl/
+.venv-cuda124-wsl/
 
 # Python cache
 __pycache__/
@@ -17,3 +18,7 @@ dist/
 
 work_dirs
 data
+
+# Local bootstrap/download helpers
+scripts/get-pip.py
+scripts/cuda-keyring_*.deb
